@@ -80,6 +80,7 @@ class Book extends Model
             $cacheKey = 'book:' . $book->id;
             cache()->forget($cacheKey);
         });
+
     }
 
 }

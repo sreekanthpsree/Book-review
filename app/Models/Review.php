@@ -24,5 +24,9 @@ class Review extends Model
             $cacheKey = 'book:' . $review->book_id;
             cache()->forget($cacheKey);
         });
+        static::created(function (Review $review) {
+            $cacheKey = 'book:' . $review->book_id;
+            cache()->forget($cacheKey);
+        });
     }
 }
