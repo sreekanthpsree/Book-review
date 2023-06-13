@@ -1,3 +1,7 @@
 <div>
-    <!-- Life is available only in the present moment. - Thich Nhat Hanh -->
+    @if ($rating)
+        @for ($i = 1; $i <= 5; $i++)
+            {{ $i <= round($rating) ? '★' : '☆' }}
+        @endfor
+    @endif
 </div>
